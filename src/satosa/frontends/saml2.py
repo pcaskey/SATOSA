@@ -349,7 +349,7 @@ class SAMLFrontend(FrontendModule, SAMLBaseModule):
             'sign_assertion': sign_assertion,
         }
 
-        #set session duration advice in SAML reponse if present in the config
+        # set session duration advice in SAML reponse if present in the config
         if session_not_on_or_after_minutes:
             sessexp_utc = datetime.datetime.utcnow() + datetime.timedelta(minutes=session_not_on_or_after_minutes)
             session_not_on_or_after = sessexp_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
